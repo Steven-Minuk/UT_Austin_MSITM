@@ -5,10 +5,11 @@ Higher than 75 Marks
 */
 
 USE UTAustin_MSITM;
+# Answer:
 Select Name From STUDENTS Where Marks > 75 order by right(Name, 3), ID;
 
 /*
-Answer:
+Correct Output:
 	Stuart
 	Kristeen
 	Christene

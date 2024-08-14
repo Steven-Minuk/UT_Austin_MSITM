@@ -6,4 +6,10 @@ Top Earners
 */
 
 USE UTAustin_MSITM;
-ALTER TABLE Employee ADD earnings INT;
+# Answer
+Select max(months*salary), count(*) from Employee where months*salary = (Select max(months*salary) from Employee);
+
+/*
+Correct Output:
+108064 7
+*/
