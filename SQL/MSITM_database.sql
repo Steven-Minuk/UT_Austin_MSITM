@@ -1,0 +1,8 @@
+CREATE DATABASE UTAustin_MSITM;
+USE UTAustin_MSITM;
+
+CREATE TABLE STUDENTS(
+	ID INT,
+	Name char(25),
+	Marks INT
+)
