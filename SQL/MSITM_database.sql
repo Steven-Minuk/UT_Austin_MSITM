@@ -48,3 +48,38 @@ CREATE TABLE COUNTRY(
 );
 
 SELECT * FROM COUNTRY;
+
+CREATE TABLE Hackers(
+	hacker_id INT NOT NULL PRIMARY KEY,
+    name varchar(25)
+);
+
+Select * from Hackers;
+
+CREATE TABLE Difficulty(
+	difficulty_level INT NOT NULL PRIMARY KEY,
+    score INT
+);
+
+Select * from difficulty;
+
+CREATE TABLE Challenges(
+	challenge_id INT NOT NULL PRIMARY KEY,
+    hacker_id INT,
+    difficulty_level INT,
+    FOREIGN KEY (hacker_id) references Hackers(hacker_id),
+    FOREIGN KEY (difficulty_level) references Difficulty(difficulty_level)
+);
+
+Select * from challenges;
+
+CREATE TABLE Submissions(
+	submission_id INT NOT NULL PRIMARY KEY,
+    hacker_id INT,
+    challenge_id INT,
+    score INT,
+    FOREIGN KEY (hacker_id) references Hackers(hacker_id),
+    FOREIGN KEY (challenge_id) references Challenges(challenge_id)
+);
+
+Select * from submissions;
