@@ -35,41 +35,51 @@ Constraints
      - 1 <= m <= 12
 """
 
-import math
-import os
-import random
-import re
-import sys
+# Answer
+def birthday(s, d, m):
+    index = 0
+    segment = 0
+    sum = 0
+    while True:
+        for i in range(index, index + m, 1):
+            sum += s[i]
+        if sum == d:
+            segment += 1
+        index += 1
+        sum = 0
+        if index > len(s) - m:
+            break
+    return segment
 
-#
-# Complete the 'birthday' function below.
-#
-# The function is expected to return an INTEGER.
-# The function accepts following parameters:
-#  1. INTEGER_ARRAY s
-#  2. INTEGER d
-#  3. INTEGER m
-#
+"""
+Test case 0
+    sample input: 5
+                  1 2 1 3 2
+                  3 2
+    
+    sample output: 2
+"""
+t0 = [5, [1,2,1,3,2], [3,2]]
+print(birthday(t0[1],t0[2][0], t0[2][1]))
 
-# def birthday(s, d, m):
-    # Answer
-    return
+"""
+Test case 1
+    sample input: 6
+                  1 1 1 1 1 1
+                  3 2
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    sample output: 0
+"""
+t1 = [6, [1, 1, 1, 1, 1, 1], [3, 2]]
+print(birthday(t1[1], t1[2][0], t1[2][1]))
 
-    n = int(input().strip())
+"""
+Test case 2
+    sample input: 1
+                  4
+                  4 1
 
-    s = list(map(int, input().rstrip().split()))
-
-    first_multiple_input = input().rstrip().split()
-
-    d = int(first_multiple_input[0])
-
-    m = int(first_multiple_input[1])
-
-    result = birthday(s, d, m)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
+    sample output: 1
+"""
+t2 = [1, [4], [4, 1]]
+print(birthday(t2[1], t2[2][0], t2[2][1]))
