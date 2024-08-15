@@ -38,3 +38,23 @@ def sockMerchant(n, ar):
         else:
             index += 1
     return pair
+
+"""
+Test case 0
+    sample input: 9
+                  10 20 20 10 10 30 50 10 20
+    
+    sample output: 3
+"""
+t0 = [9, [10, 20, 20, 10, 10, 30, 50, 10, 20]]
+print(sockMerchant(t0[0], t0[1]))
+
+"""
+Test case 1
+    sample input: 10
+                  1 1 3 1 2 1 3 3 3 3
+
+    sample output: 4
+"""
+t1 = [10, [1, 1, 3, 1, 2, 1, 3, 3, 3, 3]]
+print(sockMerchant(t1[0], t1[1]))

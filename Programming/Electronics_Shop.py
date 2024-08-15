@@ -43,3 +43,27 @@ def getMoneySpent(keyboards, drives, b):
         return -1
     else:
         return max(list)
+
+"""
+Test case 0
+    sample input: 10 2 3
+                  3 1
+                  5 2 8
+    
+    sample output: 9
+"""
+
+t0 = [[10, 2, 3], [3, 1], [5, 2, 8]]
+print(getMoneySpent(t0[1], t0[2], t0[0][0]))
+
+"""
+Test case 1
+    sample input: 5 1 1
+                  4
+                  5
+
+    sample output: -1
+"""
+
+t1 = [[5, 1, 1], [4], [5]]
+print(getMoneySpent(t1[1], t1[2], t1[0][0]))
