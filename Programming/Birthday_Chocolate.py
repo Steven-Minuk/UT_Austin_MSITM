@@ -51,7 +51,7 @@ import sys
 #  3. INTEGER m
 #
 
-def birthday(s, d, m):
+# def birthday(s, d, m):
     # Answer
     return
 

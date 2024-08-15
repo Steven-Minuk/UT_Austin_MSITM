@@ -41,7 +41,7 @@ import sys
 #  2. INTEGER_ARRAY ar
 #
 
-# def sockMerchant(n, ar):
+def sockMerchant(n, ar):
     # Write your code here
 
 if __name__ == '__main__':
