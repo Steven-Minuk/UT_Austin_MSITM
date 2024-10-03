@@ -12,7 +12,8 @@ In the 'Programming' folder, there are 'Birthday Chocolate', 'Sock Merchant', 'E
 In the 'SQL' folder, there are 'Higher than 75 Marks', 'Top Earners', 'Average Population of Each Continent', and 'Top Competitors'. 
 
 In terms of programming challenges, I used Python because these challenges do not involve much data type struggle and I am familiar with Python.
-
+In the Programming folder, you can see four Python files with the name of the challenge.
+Each file involves the answer and test case for the challenge.
 
 In terms of SQL challenges, I used MySQL because I am familiar with MySQL than other SQL languages. 
 To create perfect implementable file, I got all the data from the HackerRank and made CSV file for importing, so you could see CSV file for each table.
